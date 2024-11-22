@@ -22,7 +22,7 @@ app.use(express.json());
 passport.use(new GitHubStrategy({
     clientID: 'Ov23liaqiM1eayQKHRmn',
     clientSecret: '88130c9beccd1b3368fd17175cf51f19e5217a9f',
-    callbackURL: '/auth/github/callback',
+    callbackURL: 'https://githublogin.onrender.com/auth/github/callback',
 }, (accessToken, refreshToken, profile, done) => {
     return done(null, { profile, accessToken });
 }));
