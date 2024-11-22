@@ -44,7 +44,7 @@ app.get('/auth/github/callback', passport.authenticate('github', { session: fals
     // Set the token as an HttpOnly cookie
     res.cookie('token', token, {
         httpOnly: true,  // Make the cookie inaccessible to JavaScript (for security)
-        secure: process.env.NODE_ENV === 'production',  // Use secure cookies in production
+        secure: true,  // Use secure cookies in production
         sameSite: 'Strict',  // Restrict cross-site requests
         maxAge: 3600000,  // 1 hour expiration
     });
