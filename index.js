@@ -46,8 +46,7 @@ app.get('/auth/github/callback', passport.authenticate('github', { session: fals
         httpOnly: true,  // Make the cookie inaccessible to JavaScript (for security)
         secure: true,  // Use secure cookies in production
         sameSite: 'None',  // Restrict cross-site requests
-        maxAge: 3600000,  // 1 hour expiration
-        domain: 'https://githublogin.onrender.com',
+        maxAge: 3600000  // 1 hour expiration
     });
 
     // Redirect the user to the home page
