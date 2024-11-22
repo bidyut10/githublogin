@@ -65,9 +65,7 @@ app.get('/user/repos', (req, res) => {
 
         // Fetch user repositories using GitHub API with axios
         axios.get('https://api.github.com/user/repos', {
-            headers: {
-                Authorization: `Bearer ${accessToken}`,
-            }
+            headers: { Authorization: `token ${accessToken}` }
         })
             .then(response => res.json(response.data))  // Return repos data
             .catch(err => {
